@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+body{
+    
+    color: #ededed;
+    background-attachment: fixed;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu{
+    height: 330px;
+    width: 170px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    right: -210px;
+}
+.menu li {
+    margin-top: 27px;
+    margin-left: 63px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+.menu-bar i{
+    font-size: 1.8rem;
+}
+#check:checked ~ .menu{
+    right: 0px;
+}
+#check:checked ~ .menu-bar i{
+    opacity: 0;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+@media(max-width: 770px){
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 1.5rem;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        align-items: center;
+    }
+    .logo{
+        position: relative;
+        font-size: 4vw;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+    }
+    .navbar{
+        display: none;
+    }
+
+    .home-content h1{
+        font-size: 9vw;
+    }
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 35px;
+    color: #eddede;
+}
+
+.navbar a:hover
+,.navbar a.active{
+    color: #00abf0;
+    transition: .3s;
+}
+
+.home{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: url(pic\ 2.0.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    
+    max-width: 600px;
+
+}
+  /* .home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}  */
+
+
+.home-content p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+
+}
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+
+#element{
+    font-size: 35px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 90%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 100;
+    z-index: 1;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transform: .5s;
+
+}
+.btn-box a:hover{
+    color: #081b29;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover{
+    color: #00abf0;
+}
+.btn-box a:nth-child(2)::before{
+    background: azure ;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #00abf0;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #00abf0;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: azure;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+   
+}
